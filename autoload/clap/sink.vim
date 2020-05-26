@@ -11,7 +11,7 @@ function! clap#sink#open_file(fpath, lnum, col) abort
     execute g:clap.open_action a:fpath
   else
     " Cannot use noautocmd here as it would lose syntax, and ...
-    execute 'edit' a:fpath
+    execute 'tab drop' a:fpath
   endif
 
   noautocmd call cursor(a:lnum, a:col)

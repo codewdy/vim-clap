@@ -63,7 +63,7 @@ function! clap#provider#files#sink_impl(selected) abort
   if has_key(g:clap, 'open_action')
     execute g:clap.open_action fpath
   else
-    execute 'edit' fpath
+    execute 'tab drop' fpath
   endif
 endfunction
 
